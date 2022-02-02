@@ -1,7 +1,6 @@
-# Title 2
+# Title
 
-[a link!](https://ucsd-cse15l-w22.github.io/week/week3/)
+[a link!](https://something.com)
+[another link!](some-page.html)
 
-some words [are](special words
-
-[a second link!](https://www.google.com/)
+some paragraph text after the links
