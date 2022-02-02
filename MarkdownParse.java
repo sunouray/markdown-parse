@@ -24,12 +24,18 @@ public class MarkdownParse {
             int nextCloseBracket = markdown.indexOf("]", nextOpenBracket);
             int openParen = markdown.indexOf("(", nextCloseBracket);
 
+            // Check if open paren is immediately after close bracket
             if(openParen != nextCloseBracket+1){
-                currentIndex = openParen;
+                currentIndex++;
                 continue;
             }
 
             int closeParen = markdown.indexOf(")", openParen);
+
+            // Check if any brackets or parens were not found
+            if(nextCloseBracket == -1 || openParen == -1 || closeParen == -1){
+                break;
+            }
 
             int nextNextOpenBracket = markdown.indexOf("[", currentIndex+1);
 
