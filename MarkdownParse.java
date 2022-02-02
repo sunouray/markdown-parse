@@ -15,6 +15,12 @@ public class MarkdownParse {
 
             if(nextOpenBracket < 0) break;
 
+            // Check if this is actually an image
+            if(nextOpenBracket > 0 && markdown.charAt(nextOpenBracket-1) == '!'){
+                currentIndex = nextOpenBracket+1;
+                continue;
+            }
+
             int nextCloseBracket = markdown.indexOf("]", nextOpenBracket);
             int openParen = markdown.indexOf("(", nextCloseBracket);
 
