@@ -65,4 +65,6 @@ public class MarkdownParseTest {
         String contents = Files.readString(fileName);
         assertEquals(Arrays.asList(expected), MarkdownParse.getLinks(contents));
     }
+
+    // file has changed
 }
